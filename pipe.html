@@ -56,7 +56,7 @@
                     <div class="col-lg-8 mx-auto">
                         <div class="my-3 p-3 bg-white rounded shadow table-responsive">
                             <h6 class="border-bottom pb-2 mb-0">Pipe Circumferences</h6>
-                            <table class="table table-striped table-bordered table-hover pipetable">
+                            <table class="table table-striped table-bordered table-hover pipetable" id="myTable">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th data-field="pipe-size" scope="col">Pipe Size</th>
@@ -87,7 +87,7 @@
                                     <tr>
                                         <td>80mm</td>
                                         <td>251.33</td>
-                                        <td>0.25</td>
+                                        <td>0.26</td>
                                         <td>0.11</td>    
                                     </tr>
                                     <tr>
@@ -103,10 +103,10 @@
                                         <td>0.21</td>    
                                     </tr>
                                     <tr>
-                                        <td contenteditable="true" placeholder="Other Size"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td contenteditable="true" type="number" id="pipeSize"><input type="number"></td>
+                                        <td id="circumference"></td>
+                                        <td id="ibs"></td>
+                                        <td id="unicollar"></td>
                                     </tr>
                                 </tbody>
                             </table>    

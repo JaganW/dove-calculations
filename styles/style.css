@@ -12,3 +12,8 @@
     flex-wrap: wrap;
 }
 
+input {
+    display: table-cell;
+    width: 100%;
+}
+
