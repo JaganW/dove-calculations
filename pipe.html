@@ -1,0 +1,124 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DPF Calculations</title>
+
+        <!-- Bootstrap -->
+        <link rel="manifest" href="manifest.webmanifest">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+    </head>
+    <body class="bg-light"> 
+        <div class="container">
+            <div class="container col-lg-8 my-3 p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white shadow rounded">
+                    <div class="container-fluid">
+                        <a class="navbar-brand pl-3" href="#">DPF Calculators</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarsExample09">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Spray</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Board</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mortar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Intubatt</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown" aria-expanded="true">Charts</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown09">
+                                        <li><a class="dropdown-item" href="#">Pipe Circumference</a></li>
+                                        <li><a class="dropdown-item" href="#">Service Area</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+            <main role="main">
+                <div class="jumbotron">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="my-3 p-3 bg-white rounded shadow table-responsive">
+                            <h6 class="border-bottom pb-2 mb-0">Pipe Circumferences</h6>
+                            <table class="table table-striped table-bordered table-hover pipetable">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th data-field="pipe-size" scope="col">Pipe Size</th>
+                                        <th data-field="circumference" scope="col">Circumference (mm)</th>
+                                        <th data-field="ibs" scope="col">% I.B.S (m)</th>
+                                        <th data-field="unicollar" scope="col">% Unicollar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>40mm</td>
+                                        <td>125.66</td>
+                                        <td>0.13</td>
+                                        <td>0.06</td>    
+                                    </tr>
+                                    <tr>
+                                        <td>50mm</td>
+                                        <td>157.08</td>
+                                        <td>0.16</td>
+                                        <td>0.07</td>    
+                                    </tr>
+                                    <tr>
+                                        <td>65mm</td>
+                                        <td>204.2</td>
+                                        <td>0.21</td>
+                                        <td>0.09</td>    
+                                    </tr>
+                                    <tr>
+                                        <td>80mm</td>
+                                        <td>251.33</td>
+                                        <td>0.25</td>
+                                        <td>0.11</td>    
+                                    </tr>
+                                    <tr>
+                                        <td>100mm</td>
+                                        <td>314.16</td>
+                                        <td>0.32</td>
+                                        <td>0.14</td>    
+                                    </tr>
+                                    <tr>
+                                        <td>150mm</td>
+                                        <td>461.24</td>
+                                        <td>0.47</td>
+                                        <td>0.21</td>    
+                                    </tr>
+                                    <tr>
+                                        <td contenteditable="true" placeholder="Other Size"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+
+                        </div>
+                    </div>           
+                </div>
+            </main>
+        </div>
+        <!-- Bootstrap -->
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/script.js"></script>
+
+    </body>
+</html>
