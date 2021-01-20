@@ -1,0 +1,13 @@
+.calclinks {
+    text-decoration: none;
+    color: #0c0c0c;
+}
+
+.calclinks:hover {
+    color: #808080;
+
+}
+
+.topnav {
+    flex-wrap: wrap;
+}
