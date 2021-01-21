@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="styles/style.css">
 
     </head>
-    <body class="bg-light"> 
+    <body onload="pipeChart()" class="bg-light"> 
         <div class="container">
             <div class="container col-lg-8 my-3 p-0">
                 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow rounded">
@@ -42,7 +42,7 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown" aria-expanded="true">Charts</a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdown09">
                                         <li><a class="dropdown-item" href="#">Pipe Circumference</a></li>
-                                        <li><a class="dropdown-item" href="#">Service Area</a></li>
+                                        <li><a class="dropdown-item" href="area.html">Service Area</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -103,7 +103,7 @@
                                         <td>0.47</td>
                                         <td>0.21</td>    
                                     </tr>
-                                    <tr>
+                                    <tr class="table-primary">
                                         <td contenteditable="true" placeholder="Enter Pipe Size..." id="pipeSize"></td>
                                         <td id="circumference">0.00</td>
                                         <td id="ibs">0.00</td>

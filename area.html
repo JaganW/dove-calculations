@@ -1,0 +1,225 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DPF Calculations</title>
+
+        <!-- Bootstrap -->
+        <link rel="manifest" href="manifest.webmanifest">
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body class="bg-light" onload="areaChart()"> 
+        <div class="container">
+            <div class="container col-lg-8 my-3 p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white shadow rounded">
+                    <div class="container-fluid">
+                        <a class="navbar-brand pl-3" href="#">DPF Calculators</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarsExample09">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Spray</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Board</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mortar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Intubatt</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown" aria-expanded="true">Charts</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown09">
+                                        <li><a class="dropdown-item" href="pipe.html">Pipe Circumference</a></li>
+                                        <li><a class="dropdown-item" href="#">Service Area</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+            <main role="main">
+                <div class="jumbotron">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="my-3 pt-3 px-3 bg-white rounded shadow table-responsive">
+                            <h6 class="border-bottom pb-2 mb-0">Service Area</h6>
+                            <p class="pt-2">The following chart can be referenced to determine the penetration service area of pipes/cable trays of various sizes. Use the bottom left cells of each chart for uncommon sizes (Numbers only).</p>
+                            <table class="table table-striped table-bordered table-hover pipetable" id="myTable">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th data-field="type" scope="col">Type</th>
+                                        <th data-field="pipe-size" colspan="2" scope="col">Size (mm)</th>
+                                        <th data-field="pipe-area-mm2" scope="col">Area (mm<sup>2</sup>)</th>
+                                        <th data-field="pipe-volume-mm3" scope="col">Volume (mm<sup>3</sup>)</th>
+                                        <th data-field="pipe-area-m2" scope="col">Area (m<sup>2</sup>)</th>
+                                        <th data-field="pipe-volume-m3" scope="col">Volume (m<sup>3</sup>)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">40</td>
+                                        <td>1257</td>
+                                        <td>2136</td>
+                                        <td>0.001257</td>
+                                        <td>0.0000021363</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">50</td>
+                                        <td>1963</td>
+                                        <td>3338</td>
+                                        <td>0.001963</td>
+                                        <td>0.0000033379</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">65</td>
+                                        <td>3318</td>
+                                        <td>5641</td>
+                                        <td>0.003318</td>
+                                        <td>0.0000056411</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">80</td>
+                                        <td>5027</td>
+                                        <td>8545</td>
+                                        <td>0.005027</td>
+                                        <td>0.0000085451</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">100</td>
+                                        <td>7854</td>
+                                        <td>13352</td>
+                                        <td>0.007854</td>
+                                        <td>0.0000133518</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">150</td>
+                                        <td>17671</td>
+                                        <td>30041</td>
+                                        <td>0.017671</td>
+                                        <td>0.0000300415</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">200</td>
+                                        <td>31416</td>
+                                        <td>53407</td>
+                                        <td>0.031416</td>
+                                        <td>0.0000534071</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">250</td>
+                                        <td>49087</td>
+                                        <td>83449</td>
+                                        <td>0.049087</td>
+                                        <td>0.0000834486</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pipe</td>
+                                        <td colspan="2">300</td>
+                                        <td>70686</td>
+                                        <td>120166</td>
+                                        <td>0.070686</td>
+                                        <td>0.0001201659</td>
+                                    </tr>
+                                    <tr class="table-primary" >
+                                        <td id="type">Pipe</td>
+                                        <td contenteditable="true"  colspan="2" placeholder="Enter Pipe Size..." id="pipe-size"></td>
+                                        <td id="pipe-area-mm2">0.00</td>
+                                        <td id="pipe-volume-mm3">0.00</td>
+                                        <td id="pipe-area-m2">0.00</td>
+                                        <td id="pipe-volume-m3">0.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="areaPipeAlertPlace"></div>
+                            <table class="table table-striped table-bordered table-hover pipetable" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th data-field="type" scope="col">Type</th>
+                                        <th data-field="Length" scope="col">Length (mm)</th>
+                                        <th data-field="Width"  scope="col">Width (mm)</th>
+                                        <th data-field="area-mm2" scope="col">Area (mm<sup>2</sup>)</th>
+                                        <th data-field="volume-mm3" scope="col">Volume (mm<sup>3</sup>)</th>
+                                        <th data-field="area-m2" scope="col">Area (m<sup>2</sup>)</th>
+                                        <th data-field="volume-m3" scope="col">Volume (m<sup>3</sup>)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cable Tray</td>
+                                        <td>150</td>
+                                        <td>50</td>
+                                        <td>7500</td>
+                                        <td>12750</td>
+                                        <td>0.0075</td>
+                                        <td>0.0000127500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cable Tray</td>
+                                        <td>300</td>
+                                        <td>50</td>
+                                        <td>15000</td>
+                                        <td>25500</td>
+                                        <td>0.015</td>
+                                        <td>0.0000255000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cable Tray</td>
+                                        <td>450</td>
+                                        <td>50</td>
+                                        <td>22500</td>
+                                        <td>38250</td>
+                                        <td>0.0225</td>
+                                        <td>0.0000382500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cable Tray</td>
+                                        <td>600</td>
+                                        <td>50</td>
+                                        <td>30000</td>
+                                        <td>51000</td>
+                                        <td>0.03</td>
+                                        <td>0.0000510000</td>
+                                    </tr>
+                                    <tr class="table-primary" >
+                                        <td id="type">Cable Tray</td>
+                                        <td contenteditable="true" placeholder="Enter Tray Length..." id="size"></td>
+                                        <td contenteditable="true" placeholder="Enter Tray Width..." id="size"></td>
+                                        <td id="area-mm2">0.00</td>
+                                        <td id="volume-mm3">0.00</td>
+                                        <td id="area-m2">0.00</td>
+                                        <td id="volume-m3">0.00</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>    
+                        </div>
+                    </div>           
+                </div>
+            </main>
+        </div>
+        <!-- Bootstrap -->
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/script.js"></script>
+
+    </body>
+</html>
