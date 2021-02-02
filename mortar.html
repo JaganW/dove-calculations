@@ -1,119 +1,130 @@
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DPF Calculations</title>
 
-        <!--bootstrap-->
+        <!-- Bootstrap -->
+        <link rel="manifest" href="manifest.webmanifest">
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/style.css">
-        <title>DPF Calculations</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
-                <img src="images/Dove.png" width='30', height='33'>
-                Dove Calculations
-            </a>
-            <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-        </nav>
 
-        <div class="container-fluid">
-            <div class="row">
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-4 pt-3 ">
-                    <div class="card min-vw-50 w-75 mx-auto">
-                        <div class="card-body pages" id="details">
-                            <h5 class="card-title">Mortar Calculator</h5>
-                            <p class="card-text">Please enter the following details for the penetration.</p>
-                            <div class="card pt-3 pb-3 pl-3 pr-3 mx-auto mb-3">
-                                <h6 class="card-title">Penetration Area</h6>
-                                <p class="card-text">Please enter the dimensions for the full penetration size.</p>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Length (m)</span>
-                                    </div>
-                                    <input type="text" aria-label="length" class="form-control">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Width (m)</span>
-                                    </div>
-                                    <input type="text" aria-label="width" class="form-control">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Depth (m)</span>
-                                    </div>
-                                    <input type="text" aria-label="depth" class="form-control">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Area (m3)</span>
-                                    </div>
-                                    <input type="text" readonly aria-label="depth" class="form-control">
-                                </div>
-                            </div>
-                            <div class="card pt-3 pb-3 pl-3 pr-3 mx-auto mb-3">
-                                <h6 class="card-title pt-3">Service Area</h6>
-                                <p class="card-text">Please enter the dimensions for the service size.</p>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Length (m)</span>
-                                    </div>
-                                    <input type="text" aria-label="length" class="form-control">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Width (m)</span>
-                                    </div>
-                                    <input type="text" aria-label="width" class="form-control">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Depth (m)</span>
-                                    </div>
-                                    <input type="text" readonly aria-label="depth" class="form-control">
-                                </div>
-                            </div>
-                            <div class="card pt-3 pb-3 pl-3 pr-3 mx-auto mb-3">
-                                <h6 class="card-title pt-3">Materials</h6>
-                                <p class="card-text">Please enter the number of penetrations below..</p>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Number of Penetrations</span>
-                                    </div>
-                                    <input type="text" aria-label="length" class="form-control">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Z-Brackets</span>
-                                    </div>
-                                    <input type="text" aria-label="width" class="form-control">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Depth (m)</span>
-                                    </div>
-                                    <input type="text" readonly aria-label="depth" class="form-control">
-                                </div>
-                            </div>
+    </head>
+    <body onload="mortar()" class="bg-light"> 
+        <div class="container">
+            <div class="container col-lg-8 my-3 p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white shadow rounded">
+                    <div class="container-fluid">
+                        <a class="navbar-brand pl-3" href="#">DPF Calculators</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarsExample09">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Spray</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Board</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mortar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="intubatt.html">Intubatt</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-bs-toggle="dropdown" aria-expanded="true">Charts</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdown09">
+                                        <li><a class="dropdown-item" href="pipe.html">Pipe Circumference</a></li>
+                                        <li><a class="dropdown-item" href="area.html">Service Area</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </main>            
-                <nav aria-label="Page navigation" class="mx-auto pt-3">
-                    <ul class="pagination" id="bot-nav">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#details">Job Details</a></li>
-                      <li class="page-item"><a class="page-link" href="#steel">Steel Lengths</a></li>
-                      <li class="page-item"><a class="page-link" href="#material">Material Cost</a></li>
-                      <li class="page-item"><a class="page-link" href="#labour">Labour Cost</a></li>
-                      <li class="page-item"><a class="page-link" href="#summary">Summary</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-            </div>
-        </div>
+                </nav>
 
-        <!--jquery + bootstrap-->
-        <script src="scripts/jquery-3.5.1.min.js"></script>
-        <script src="scripts/bootstrap.bundle.min.js "></script>
+            </div>
+            <main role="main">
+                <div class="jumbotron">
+                    <div class="col-lg-8 mx-auto"> 
+                        <div class="my-3 pt-3 px-3 bg-white rounded shadow table-responsive">
+                            <h6 class="border-bottom pb-2 mb-0">Mortar Calculator</h6>
+                            <p class="pt-2">Use this calculator to determine the price and required bags of mortar, z-brackets, and rod for a given penetration, or multiple penetrations across a job.</p>
+                            <div class="alert alert-info alert-dismissible p-2  pr-4 fade fade-in show" role="alert"><strong>Note: </strong>Penetrations greater than 600mm x 400mm require P50 joints.<button type="btn" class="btn-close pb-1" data-bs-dismiss="alert" aria-label="close"></button></div>
+                            <hr>
+                            <form>
+                                <div class="mb-3 row">
+                                    <div class="col">
+                                        <label for="penoLength" class="fs-6 form-label">Length (m)</label>
+                                        <input id="penoLength" type="number" class="form-control mortarCalc" aria-describedby="penoLength">
+                                    </div>
+                                    <div class="col">
+                                        <label for="penoWidth" class="form-label">Width (m)</label>
+                                        <input id="penoWidth" type="number" class="form-control mortarCalc" aria-describedby="penoWidth">
+                                    </div>
+                                    <div class="col">
+                                        <label for="penoDepth" class="form-label">Depth (m)</label>
+                                        <input id="penoDepth" type="number" class="form-control mortarCalc" aria-describedby="penoDepth">
+                                    </div>
+                                    <div class="col">
+                                        <label for="penoVolume" class="form-label">Total (m<sup>3</sup>)</label>
+                                        <input id="penoVolume" type="number" class="form-control" aria-describedby="penoVol" readonly>
+                                    </div>
+
+                                    <div class="penoVol form-text">Enter the length, width and depth of the penetration area.</div>      
+                                </div>
+                                <div class="alert alert-success alert-dismissible p-2  pr-4 fade fade-in show" role="alert"><strong>Note: </strong>Floor penetrations only require a 0.070m depth.<button type="btn" class="btn-close pb-1" data-bs-dismiss="alert" aria-label="close"></button></div>
+                                <hr>   
+                                <div class="mb-3 row">
+                                    <div class="col">
+                                        <label for="serviceLength" class="form-label">Length (m)</label>
+                                        <input id="serviceLength" type="number" class="form-control mortarCalc" aria-describedby="serviceLength">
+                                    </div>
+                                    <div class="col">
+                                        <label for="serviceWidth" class="form-label">Width (m)</label>
+                                        <input id="serviceWidth" type="number" class="form-control mortarCalc" aria-describedby="serviceWidth">
+                                    </div>
+                                    <div class="col">
+                                        <label for="serviceDepth" class="form-label">Depth (m)</label>
+                                        <input id="serviceDepth" type="number" class="form-control mortarCalc" aria-describedby="serviceDepth">
+                                    </div>
+                                    <div class="col">
+                                        <label for="serviceVolume" class="form-label">Total (m<sup>3</sup>)</label>
+                                        <input id="serviceVolume" type="number" class="form-control" aria-describedby="serviceVolume" readonly>
+                                    </div>
+
+                                    <div class="penoVol form-text">Enter the length, width and depth of the service area.</div>      
+                                </div>
+                                <hr>                                
+                                <div class="mb-3 row">
+                                    <div class="col">
+                                        <label for="penetration-price" class="form-label">Price per penetration.</label>
+                                        <input id="pricePer" type="text" class="form-control" id="penetration-price" aria-describedby="pricing" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="total-price" class="form-label">Total price.</label>
+                                        <input id="priceTotal" type="text" class="form-control" id="total-price" aria-describedby="pricing" readonly>
+                                    </div>
+                                    <div class="pricing form-text">View the intubatt pricings above.</div>      
+                                </div>
+                                <hr>
+                            </form>  
+                            <div class="alert alert-warning alert-dismissible p-2  pr-4 fade fade-in show" role="alert"><strong>Note: </strong>Please use only numbers in the cells above.<button type="btn" class="btn-close pb-1" data-bs-dismiss="alert" aria-label="close"></button></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Bootstrap -->
+        <script src="scripts/bootstrap.min.js"></script>
         <script src="scripts/script.js"></script>
+        
     </body>
 </html>

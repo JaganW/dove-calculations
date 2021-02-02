@@ -4,9 +4,6 @@ window.addEventListener("load", () => {
   }
 });
 
-
-
-// Pipe circumference Calculations
 function pipeChart() {
   var pipe = document.getElementById("pipeSize");
   var circumference = document.getElementById("circumference");
@@ -21,6 +18,59 @@ function pipeChart() {
       unicollar.innerHTML = parseFloat(Math.ceil((circumference.innerHTML / 2250) * 100) / 100).toFixed(2);  
     }
   });  
+}
+
+function intubatt() {
+  var penoSize = document.getElementsByClassName("intubattInput")
+  var length = document.getElementById("length");
+  var width = document.getElementById("width");
+  var area = document.getElementById("area");
+  var number = document.getElementById("number");
+  var noPer = document.getElementById("noPer");
+  var noTotal = document.getElementById("noTotal");
+  var pricePer = document.getElementById("pricePer");
+  var priceTotal = document.getElementById("priceTotal");
+
+  for(var i = 0; i < penoSize.length; i++) {
+    penoSize[i].addEventListener('input', function() {
+      area.value = (length.value * width.value).toFixed(4);
+      noPer.value = (area.value / 0.72).toFixed(4);
+      noTotal.value = ((area.value / 0.72) * number.value).toFixed(4);
+      pricePer.value = '$' + parseFloat(noPer.value * 68);
+      priceTotal.value = '$' + parseFloat((noPer.value * 68) * number.value);
+    })
+  }
+}
+
+function mortar() {
+  var mortarCalc = document.getElementsByClassName("mortarCalc");
+  var penoLength = document.getElementById("penoLength");
+  var penoWidth = document.getElementById("penoWidth");
+  var penoDepth = document.getElementById("penoDepth");
+  var penoVolume = document.getElementById("penoVolume");
+  var serviceLength = document.getElementById("serviceLength");
+  var serviceWidth = document.getElementById("serviceWidth");
+  var serviceDepth = document.getElementById("serviceDepth");
+  var serviceVolume = document.getElementById("serviceVolume");
+  var zBrac = document.getElementById("zBrac");
+  var number = document.getElementById("number");
+  var blackRod = document.getElementById("blackRod");
+  var bagsPer = document.getElementById("bagsPer");
+  var totalBags = document.getElementById("totalBags");
+  var pricePer = document.getElementById("pricePer");
+  var priceTotal = document.getElementById("priceTotal");
+  for(var i = 0; i < mortarCalc.length; i++) {
+    mortarCalc[i].addEventListener('input', function() {
+      serviceVolume.value = (serviceLength.value * serviceDepth.value * serviceWidth.value).toFixed(4);
+      penoVolume.value = ((penoLength.value * penoDepth.value * penoWidth.value) - serviceVolume.value).toFixed(4);
+      //zBrackets  ask dovey - can i just calculate perimeter of service area and do that?
+      //Black Rod  ask dovey
+      bagsPer.value = ((penoVolume.value * 30) * 1.1).toFixed(4);
+      totalBags.value = (bagsPer.value * number.value).toFixed(4);
+      pricePer.value = '$' + parseFloat((bagsPer.value * 64.35).toFixed(4));
+      priceTotal.value = '$' + parseFloat((number * (bagsPer.value * 64.35)).toFixed(4));
+    })
+  }
 }
 
 function areaChart() {
@@ -62,11 +112,6 @@ function areaChart() {
   }
 }
 
-
-
-function trayCalc() {
-
-}
 
 function showAlert(alert, message) {
   if(!document.getElementById(alert)) {

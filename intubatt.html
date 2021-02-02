@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="styles/style.css">
 
     </head>
-    <body onload="" class="bg-light"> 
+    <body onload="intubatt()" class="bg-light"> 
         <div class="container">
             <div class="container col-lg-8 my-3 p-0">
                 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow rounded">
@@ -33,7 +33,7 @@
                                     <a class="nav-link" href="#">Board</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Mortar</a>
+                                    <a class="nav-link" href="mortar.html">Mortar</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Intubatt</a>
@@ -56,8 +56,57 @@
                     <div class="col-lg-8 mx-auto"> 
                         <div class="my-3 pt-3 px-3 bg-white rounded shadow table-responsive">
                             <h6 class="border-bottom pb-2 mb-0">Intubatt Calculator</h6>
-                            <p class="pt-2"></p>
-                            
+                            <p class="pt-2">Use this calculator to determine the required amount of intubatt for a given penetration, or multiple penetrations across a job.</p>
+                            <div class="alert alert-info alert-dismissible p-2  pr-4 fade fade-in show" role="alert"><strong>Note: </strong>Sheet size is 1200mm x 600mm x 50mm.<button type="btn" class="btn-close pb-1" data-bs-dismiss="alert" aria-label="close"></button></div>
+                            <hr>
+                            <form>
+                                <div class="mb-3 row">
+                                    <div class="col">
+                                        <label for="intubatt-length" class="form-label">Length (m)</label>
+                                        <input id="length" type="number" class="form-control intubattInput" id="intubatt-length" aria-describedby="serviceSize">
+                                    </div>
+                                    <div class="col">
+                                        <label for="intubatt-width" class="form-label">Width (m)</label>
+                                        <input id="width" type="number" class="form-control intubattInput" id="intubatt-width" aria-describedby="serviceSize">
+                                    </div>
+                                    <div class="col">
+                                        <label for="intubatt-size" class="form-label">Area (m<sup>2</sup>)</label>
+                                        <input id="area" type="number" class="form-control" id="intubatt-size" aria-describedby="serviceSize" readonly>
+                                    </div>
+                                
+                                    <div class="serviceSize form-text">Enter the length and width of the service area.</div>      
+                                </div>
+                                <hr>   
+                                <div class="mb-3 row">
+                                    <div class="col">
+                                        <label for="penetration-number" class="form-label">Number of Penetrations</label>
+                                        <input id="number" type="number" class="form-control intubattInput" id="penetration-number" aria-describedby="intubattQuantity">
+                                    </div>
+                                    <div class="col">
+                                        <label for="intubatt-number" class="form-label">Intubatt required per penetration.</label>
+                                        <input id="noPer" type="number" class="form-control" id="intubatt-number" aria-describedby="intubattQuantity" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="total-number" class="form-label">Total intubatt required.</label>
+                                        <input id="noTotal" type="number" class="form-control" id="total-number" aria-describedby="intubattQuantity" readonly>
+                                    </div>
+                                    <div class="intubattQuantity form-text">Enter the number of penetrations required above.</div>      
+                                </div>
+                                <hr>
+                                <div class="mb-3 row">
+                                    <div class="col">
+                                        <label for="penetration-price" class="form-label">Price per penetration.</label>
+                                        <input id="pricePer" type="text" class="form-control" id="penetration-price" aria-describedby="pricing" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <label for="total-price" class="form-label">Total price.</label>
+                                        <input id="priceTotal" type="text" class="form-control" id="total-price" aria-describedby="pricing" readonly>
+                                    </div>
+                                    <div class="pricing form-text">View the intubatt pricings above.</div>      
+                                </div>
+                                <hr>
+                            </form>  
+                            <div class="alert alert-warning alert-dismissible p-2  pr-4 fade fade-in show" role="alert"><strong>Note: </strong>Please use only numbers in the cells above.<button type="btn" class="btn-close pb-1" data-bs-dismiss="alert" aria-label="close"></button></div>
                         </div>
                     </div>
                 </div>
