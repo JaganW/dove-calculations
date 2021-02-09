@@ -53,7 +53,9 @@ function mortar() {
   var serviceDepth = document.getElementById("serviceDepth");
   var serviceVolume = document.getElementById("serviceVolume");
   var zBrac = document.getElementById("zBrac");
+  var zBracTotal = document.getElementById("zBracTotal");
   var number = document.getElementById("number");
+  number.value = 1;
   var blackRod = document.getElementById("blackRod");
   var bagsPer = document.getElementById("bagsPer");
   var totalBags = document.getElementById("totalBags");
@@ -63,12 +65,12 @@ function mortar() {
     mortarCalc[i].addEventListener('input', function() {
       serviceVolume.value = (serviceLength.value * serviceDepth.value * serviceWidth.value).toFixed(4);
       penoVolume.value = ((penoLength.value * penoDepth.value * penoWidth.value) - serviceVolume.value).toFixed(4);
-      //zBrackets  ask dovey - can i just calculate perimeter of service area and do that?
-      //Black Rod  ask dovey
+      zBrac.value = Math.ceil(((penoLength.value * 2) + (penoWidth.value * 2)) / 0.3)
+      zBracTotal.value = number.value * Math.ceil(((penoLength.value * 2) + (penoWidth.value * 2)) / 0.3)
       bagsPer.value = ((penoVolume.value * 30) * 1.1).toFixed(4);
       totalBags.value = (bagsPer.value * number.value).toFixed(4);
       pricePer.value = '$' + parseFloat((bagsPer.value * 64.35).toFixed(4));
-      priceTotal.value = '$' + parseFloat((number * (bagsPer.value * 64.35)).toFixed(4));
+      priceTotal.value = '$' + parseFloat((totalBags.value * 64.35).toFixed(4));
     })
   }
 }

@@ -27,10 +27,10 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Spray</a>
+                                    <a class="nav-link" href="spray.html">Spray</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Board</a>
+                                    <a class="nav-link" href="board.html">Board</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Mortar</a>
@@ -105,6 +105,36 @@
                                 <hr>                                
                                 <div class="mb-3 row">
                                     <div class="col">
+                                        <label for="number" class="form-label">Number of Penetrations</label>
+                                        <input id="number" type="number" class="form-control mortarCalc" aria-describedby="serviceLength">
+                                    </div>
+                                    <div class="col">
+                                        <label for="penetration-price" class="form-label">Bags per penetration.</label>
+                                        <input type="text" class="form-control" id="bagsPer" aria-describedby="materialReq" readonly>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="total-price" class="form-label">Total bags required.</label>
+                                        <input type="text" class="form-control" id="totalBags" aria-describedby="materialReq" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="zBrac" class="form-label">Z-Brackets per peno.</label>
+                                                <input type="text" class="form-control" id="zBrac" aria-describedby="materialReq" readonly>    
+                                            </div>    
+                                            <div class = "col">
+                                                <label for="zBracTotal" class="form-label">Total Z-Brackets.</label>
+                                                <input type="text" class="form-control" id="zBracTotal" aria-describedby="materialReq" readonly>    
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="materialReq form-text">View the required quantity of mortar, z-brackets and black rod per penetration.</div>      
+                                <hr>                                
+                                <div class="mb-3 row">
+                                    <div class="col">
                                         <label for="penetration-price" class="form-label">Price per penetration.</label>
                                         <input id="pricePer" type="text" class="form-control" id="penetration-price" aria-describedby="pricing" readonly>
                                     </div>
@@ -112,7 +142,7 @@
                                         <label for="total-price" class="form-label">Total price.</label>
                                         <input id="priceTotal" type="text" class="form-control" id="total-price" aria-describedby="pricing" readonly>
                                     </div>
-                                    <div class="pricing form-text">View the intubatt pricings above.</div>      
+                                    <div class="pricing form-text">View the mortar pricings above.</div>      
                                 </div>
                                 <hr>
                             </form>  
