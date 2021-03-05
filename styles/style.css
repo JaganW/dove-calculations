@@ -33,3 +33,12 @@ th {
 .pipeButt {
     align-self: center;
 }
+
+.accordion-button:not(.collapsed) {
+    background-color: white !important;
+    color: #0c0c0c;
+}
+.accordion-button.collapsed{
+    outline: none;
+    background-color: white !important;
+}

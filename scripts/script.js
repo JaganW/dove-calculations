@@ -120,3 +120,34 @@ function showAlert(alert, message) {
     document.getElementById(alert + 'Place').innerHTML += '<div class="alert alert-warning alert-dismissible p-2  pr-4 fade fade-in show" role="alert" id="'+ alert +'"><strong>Note: </strong>' + message + '<button type="btn" class="btn-close pb-1" data-bs-dismiss="alert" aria-label="close"></button></div>';
   }
 }
+
+function board() {
+  var UBSection = document.getElementById('UBSection');
+  var UBWeight = document.getElementById('UBWeight');
+  var options = ["125", "113", "101"]; 
+
+  if(UBSection.options[UBSection.selectedIndex].text == '610UB') {
+    console.log(createOption("test", 1));
+    for(var i = 0; i < 3; i++) {
+      //UBWeight.add(createOption(UBWeight[i], i), UBweight[i])
+    }
+  }
+  /*
+  UBSection.addEventListener('change', (event) => {
+    var option = document.createElement("option");   
+    var options = ["92.4", "82", "82.1"]; 
+    if(UBSection.options[UBSection.selectedIndex].text == '530UB') {
+      for(var i = 0; i < 3; i++) {
+        UBWeight.add(document.createElement("Option").text(options[i]), UBWeight[i]);
+      }
+    console.log(UBSection.options[UBSection.selectedIndex].text);
+  });*/
+}
+/*
+function createOption(text, value) {
+  var option = document.createElement("option");
+  option.appendChild(text);
+  option.style.Id = value;
+  return option;
+}
+*/
