@@ -122,27 +122,33 @@ function showAlert(alert, message) {
 }
 
 function board() {
-  var UBSection = document.getElementById('UBSection');
-  var UBWeight = document.getElementById('UBWeight');
-  var options = ["125", "113", "101"]; 
+  var div = document.createElement('div');
+  div.setAttribute("class", "accordion-item");
 
-  if(UBSection.options[UBSection.selectedIndex].text == '610UB') {
-    console.log(createOption("test", 1));
-    for(var i = 0; i < 3; i++) {
-      //UBWeight.add(createOption(UBWeight[i], i), UBweight[i])
+  var addSteel = document.getElementById("addSteel");
+  var steelType = document.getElementById("steelType");
+  var steelList = document.getElementById("steelList");
+  addSteel.onclick = function () {
+    for(i = 0; i < steelType.options.length; i++) {
+      if(steelType.selectedIndex == i) {
+        div.innerHTML = `<div class="accordion-item">
+                           <h2 class="accordian-header" id="headingThree">
+                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">${steelType[i].text}</button>
+                           </h2>
+                           <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-toggle="#steelList">
+                             <div class="accordion-body">
+                             </div>
+                           </div>
+                         </div>`
+        steelList.append(div);
+      }
+  
     }
   }
-  /*
-  UBSection.addEventListener('change', (event) => {
-    var option = document.createElement("option");   
-    var options = ["92.4", "82", "82.1"]; 
-    if(UBSection.options[UBSection.selectedIndex].text == '530UB') {
-      for(var i = 0; i < 3; i++) {
-        UBWeight.add(document.createElement("Option").text(options[i]), UBWeight[i]);
-      }
-    console.log(UBSection.options[UBSection.selectedIndex].text);
-  });*/
 }
+
+
+
 /*
 function createOption(text, value) {
   var option = document.createElement("option");
